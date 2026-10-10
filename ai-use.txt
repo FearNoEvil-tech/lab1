@@ -1,0 +1,32 @@
+AI Use - Lab 1: Peer Tutoring Hub
+
+AI tool used:
+Claude (Anthropic), Opus 5.5
+
+Prompts used:
+1. "Next we need to work on this lab task:" followed by the Lab 1 instructions.
+2. "Where do I create the repo?"
+3. "I did that and the image looks like crap. I need to change that. Can I change
+   it myself in the code portion?"
+
+How AI helped:
+Claude reviewed the Lab 1 base code against the lab requirements and generated
+the corrected HTML, CSS, and PHP files. It found several problems in the starter
+files, including links and an image path pointing to a nonexistent "lab1/"
+folder, a missing doctype and stylesheet links on the request form, an invalid
+CSS color value, and unused CSS rules. It also explained each file so I can
+describe every line, and walked me through creating the repository, moving the
+stylesheet and image into the required css/ and images/ folders with git mv,
+and testing the site with the PHP development server.
+
+Suggestion I tested, revised, or rejected:
+Claude kept the provided tutoring illustration and converted it to tutoring.jpg
+with new alt text. When I tested the home page in the browser, the image was
+dark and low-contrast, so I rejected it. I replaced it with a photo of students
+studying together and rewrote the alt text myself to describe the new image
+accurately.
+
+Testing:
+I confirmed in the PHP server log that every page, the stylesheet, and the image
+returned HTTP 200, that the empty form is blocked by the required attributes,
+and that submitting the form displays "Your tutoring request was received."
