@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Peer Tutoring Hub | Request a Session</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container d-flex flex-wrap align-items-center justify-content-between gap-2">
+            <a class="site-brand" href="index.html">Peer Tutoring Hub</a>
+            <nav aria-label="Main navigation">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tutors.html">Tutors</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="request-form.html">Request a Session</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <h1>Request a Tutoring Session</h1>
+                <p>Tell us which course you need help with and when you would like to meet.</p>
+
+                <div class="content-card">
+                    <form action="process-request.php" method="post">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label for="course" class="form-label">Course</label>
+                                <input type="text" class="form-control" id="course" name="course"
+                                    placeholder="e.g., IS 6465" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="date" class="form-label">Preferred Date</label>
+                                <input type="date" class="form-control" id="date" name="date" required>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Request Session</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

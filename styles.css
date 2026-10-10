@@ -1,0 +1,94 @@
+/* Peer Tutoring Hub
+   Shared stylesheet for index.html, tutors.html, and request-form.html.
+   Loaded after Bootstrap, so these rules win when they target the same thing. */
+
+/* Site colors, defined once and reused below */
+:root {
+    --hub-navy: #0b1f3a;
+    --hub-blue: #1f5fbf;
+    --hub-blue-dark: #174a96;
+    --hub-amber: #f5a623;
+    --hub-text: #1f2933;
+    --hub-background: #f5f7fa;
+    --hub-border: #dde3ea;
+}
+
+/* Page typography */
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    color: var(--hub-text);
+    background-color: var(--hub-background);
+    line-height: 1.6;
+}
+
+h1 {
+    color: var(--hub-navy);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Header bar and navigation */
+.site-header {
+    background-color: var(--hub-navy);
+    border-bottom: 4px solid var(--hub-amber);
+    padding: 0.75rem 0;
+}
+
+.site-brand {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-brand:hover,
+.site-brand:focus {
+    color: var(--hub-amber);
+}
+
+.site-header .nav-link {
+    color: #dbe4f0;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link:focus {
+    color: #ffffff;
+}
+
+.site-header .nav-link.active {
+    color: var(--hub-amber);
+    font-weight: 600;
+}
+
+/* Primary button: re-color Bootstrap's button through its own variables */
+.btn-primary {
+    --bs-btn-bg: var(--hub-blue);
+    --bs-btn-border-color: var(--hub-blue);
+    --bs-btn-hover-bg: var(--hub-blue-dark);
+    --bs-btn-hover-border-color: var(--hub-blue-dark);
+    --bs-btn-active-bg: var(--hub-blue-dark);
+}
+
+/* White panel used around the tutor table and the request form */
+.content-card {
+    background-color: #ffffff;
+    border: 1px solid var(--hub-border);
+    border-radius: 0.75rem;
+    padding: 2rem;
+}
+
+caption {
+    color: var(--hub-navy);
+    font-weight: 600;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+/* Narrow screens: tighten the panel padding so content keeps its width */
+@media (max-width: 576px) {
+    .content-card {
+        padding: 1.25rem;
+    }
+}
